@@ -1,0 +1,21 @@
+<nav class="navigation">
+    <ul>
+      <li class="logoLi"><div class="logo"><img src="{{ logoImg }}" /></div></li>
+      <li><a class="navigationLink" routerLink="/">Home</a></li>
+      <li><a class="navigationLink" routerLink="/about">About</a></li>
+      <li><a class="navigationLink" routerLink="/contact">Contact us</a></li>
+      <li><a class="navigationLink" routerLink="/test1">Test Link 1</a></li>
+      <li><a class="navigationLink" routerLink="/test2">Test Link 2</a></li>
+      <li class="notificationsLi"><div class="notifications"><img src="{{ loginNotificationsImg }}" /></div></li>
+      <li class="loginLi"><div class="login"><img (click)="login()" src="{{ loginImg }}" /></div></li>
+    </ul>
+</nav>
+
+<div [class.invis]="test">
+  <p>Login</p>
+  <br />
+  <p>Username: </p>
+  <p>Password: </p>
+  <br />
+  <p>Register</p>
+</div>

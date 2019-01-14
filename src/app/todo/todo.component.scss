@@ -1,0 +1,46 @@
+
+.formWrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+
+  & label {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+  }
+
+  & input {
+    padding: 5px;
+  }
+
+  &TitleInput {
+
+  }
+
+  &DescText {
+    padding: 10px;
+  }
+}
+
+.todoWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+
+  &Submit {
+    width: 40%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: cornflowerblue;
+    box-sizing: none;
+    border: cornflowerblue;
+  }
+}

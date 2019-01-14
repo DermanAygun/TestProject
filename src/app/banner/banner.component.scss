@@ -1,0 +1,11 @@
+.bannerWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+
+  &Box {
+    width: 50%;
+    height: 250px;
+    border: solid 1px black;
+  }
+}
