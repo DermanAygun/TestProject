@@ -1,15 +1,29 @@
 <div class="formWrapper">
-  <form class="todo">
+  <div class="todo">
     <label class="todoTitle" for="todoTitle">Title</label>
-    <input autocomplete="off" type="text" name="title" class="todoTitleInput"><br>
-
-    <label class="todoDesc" for="todoDesc">Description</label>
-    <textarea class="todoDescText"></textarea>
-
+    <input #itemTitle autocomplete="off" type="text" name="title" (keydown)="enterKey($event, itemTitle)" class="todoTitleInput"><br>
     <div class="todoWrapper">
-      <input class="todoWrapperSubmit" type="submit" value="Submit">
+      <button class="todoWrapperSubmit" (click)="onAdd(itemTitle)" >Submit</button>
     </div>
-  </form>
+  </div>
 </div>
 
-<app-todo-list></app-todo-list>
+<span class="todostitle">Todo's</span>
+<div class="todomainsection">
+  <div class="todosection">
+    <div class="wrapper" style="margin: 5px 0px;">
+      <ul class="list-group">
+        <span style="text-align: center;" *ngIf="toDoListArray == 0">There are no todo's</span>
+        <li class="list-group-item" *ngFor="let item of toDoListArray">
+      <span class="hover-cursor" [class.text-success]="item.isChecked" (click)="alterCheck(item.$key, item.isChecked)">
+        <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
+      </span>
+          {{ item.title }}
+          <span class="hover-cursor text-danger pull-right" (click)="onDelete(item.$key)">
+        <i class="fa fa-trash-o fa-lg"></i>
+      </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

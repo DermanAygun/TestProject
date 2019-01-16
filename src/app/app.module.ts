@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';﻿
+import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +12,6 @@ import { TodoComponent } from './todo/todo.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-import { TodoListComponent } from './todo/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,13 @@ import { TodoListComponent } from './todo/todo-list/todo-list.component';
     TodoComponent,
     FooterComponent,
     ContactComponent,
-    HomeComponent,
-    TodoListComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
