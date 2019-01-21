@@ -7,15 +7,37 @@
       <li><a class="navigationLink" routerLink="/test1">Test Link 1</a></li>
       <li><a class="navigationLink" routerLink="/test2">Test Link 2</a></li>
       <li class="notificationsLi"><div class="notifications"><img src="{{ loginNotificationsImg }}" /></div></li>
-      <li class="loginLi"><div class="login"><img (click)="login()" src="{{ loginImg }}" /></div></li>
+      <li class="loginLi"><div class="login"><img (click)="open()" src="{{ loginImg }}" /></div></li>
     </ul>
 </nav>
 
-<div [class.invis]="test">
-  <p>Login</p>
-  <br />
-  <p>Username: </p>
-  <p>Password: </p>
-  <br />
-  <p>Register</p>
-</div>
+<style *ngIf="open()">
+
+</style>
+
+<section [class.Hide]="register">
+  <div class="overlay"></div>
+  <div class="registerSection">
+    <div class="registerPop">
+      <div class="registerPopWrapper">
+        <img (click)="close()" class="registerPopImage" src="https://image.flaticon.com/icons/svg/59/59254.svg">
+        <span class="registerPopTitle">Create An Account</span>
+        <span class="registerPopSubTitle">Welcome! Register for an account</span>
+
+        <form class="registerPopForm">
+          <input required autocomplete="off" type="text" name="username" placeholder="Your username">
+          <input required autocomplete="off" type="email" name="email" placeholder="Your email">
+          <input required autocomplete="off" type="text" name="password" placeholder="Password">
+          <input required autocomplete="off" type="text" name="confirmPassword" placeholder="Confirm Password">
+
+          <input type="submit" class="registerPopSubmit" name="register" value="register">
+        </form>
+
+        <div class="registerPopFooter">
+          <p class="registerPopFooterText">Already a member?</p>
+          <button class="registerPopFooterButton">sign in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

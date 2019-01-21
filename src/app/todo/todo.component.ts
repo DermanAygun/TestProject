@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgModule }      from '@angular/core';
 import { FormsModule }      from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 import { TodoService } from './shared/todo.service';
 
@@ -25,6 +26,10 @@ export class TodoComponent implements OnInit {
           x["$key"] = element.key;
           this.toDoListArray.push(x);
         })
+
+        this.user_data = new FormGroup({
+          title: new FormControl('itemTitle', Validators.required)
+        });
 
         //sort array isChecked -> true
         this.toDoListArray.sort((a,b) => {

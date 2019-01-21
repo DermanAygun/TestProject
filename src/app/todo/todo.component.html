@@ -1,7 +1,7 @@
 <div class="formWrapper">
   <div class="todo">
     <label class="todoTitle" for="todoTitle">Title</label>
-    <input #itemTitle autocomplete="off" type="text" name="title" (keydown)="enterKey($event, itemTitle)" class="todoTitleInput"><br>
+    <input #itemTitle formControlName="title" autocomplete="off" type="text" name="title" (keydown)="enterKey($event, itemTitle)" class="todoTitleInput"><br>
     <div class="todoWrapper">
       <button class="todoWrapperSubmit" (click)="onAdd(itemTitle)" >Submit</button>
     </div>

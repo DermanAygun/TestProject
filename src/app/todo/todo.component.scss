@@ -1,6 +1,6 @@
 
 .formWrapper {
-  margin-top: 100px;
+  margin-top: 150px;
   display: flex;
   justify-content: center;
 }
@@ -37,15 +37,16 @@
   &Submit {
     width: 30%;
     height: 50px;
+    color: white;
     display: flex;
     justify-content: center;
-    background-color: #c0bfc1;
+    background-color: #0DACF1;
     box-sizing: none;
-    border: #c0bfc1;
+    border: none;
     cursor: pointer;
 
     &:hover {
-      background-color: #ccccce;
+      background-color: #2EB7F2;
     }
   }
 }
@@ -73,7 +74,7 @@
 .todostitle {
   display: flex;
   justify-content: center;
-  margin: 5% 1% 1% 1%;
+  margin: 2% 1% 1% 1%;
 }
 
 .list-group {

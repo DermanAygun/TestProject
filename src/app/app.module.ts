@@ -12,6 +12,7 @@ import { TodoComponent } from './todo/todo.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     TodoComponent,
     FooterComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
